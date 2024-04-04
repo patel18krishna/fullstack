@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>help</title>
+      <style>
+          /* CSS Styles */
+          .image {
+              position: absolute;
+          }
+          .rounded-div {
+              position: absolute;
+              border-radius: 40px;
+          }
+          .text-container {
+              position: absolute;
+              color: #001F3F;
+              font-size: 27px;
+              font-family: Inter;
+              font-weight: 400;
+              word-wrap: break-word;
+          }
+      </style>
+  </head>
+  <body>
+    
+      <!-- Divs -->
+      <div style="width: 283px; height: 831px; left: 0px; top: 142px; position: absolute; background: #F0F0F0; border-radius: 20px"></div>
+      <div class="rounded-div" style="width: 1050px; height: 1176px; left: 350px; top: 142px; background: #D9D9D9; border-radius: 30px;"></div>
+      
+      <!-- Images -->
+      <img class="image" style="width: 27px; height: 28px; left: 54px; top: 208px;" src = "../static/grammercheck.png" alt="Grammer Check Image">
+      <img class="image" style="width: 21px; height: 25px; left: 53px; top: 248px;" src = "../static/grammer.png" alt="Grammer Image">
+      <img class="image" style="width: 19px; height: 26px; left: 53px; top: 170px;" src = "../static/user.png" alt="User Image">
+      <img class="image" style="width: 24px; height: 23px; left: 54px; top: 290px;" src = "../static/translate.png" alt="Translate Image">
+      <img class="image" style="width: 24px; height: 22px; left: 54px; top: 486px;" src = "../static/contact.png" alt="Contact Image">
+      <img class="image" style="width: 22px; height: 23px; left: 54px; top: 520px;" src = "../static/help.png" alt="Help Image">
+      <img class="image" style="width: 249px; height: 96px; left: 17px; top: 28px;" src = "../static/precision-text.png" alt="Precision Text Image">
+      <div style="width: 626px; height: 60px; left: 400px; top: 50px; position: absolute; color: #001F3F; font-size: 50px; font-family: Inter; font-weight: 400; word-wrap: break-word">Welcome to PrecesionText</div>
+      <button id = "usericon" style="width: 42px; height: 37.42px; left: 1248px; top: 43px; position: absolute; border: none; background: none; cursor: pointer; display: inline-flex; justify-content: center; align-items: center;">
+        <img src = "../static/user.png" style="width: 100%; height: 100%;" alt="User Button">
+    </button>
+    
+    <button id = "homeicon" style="width: 42px; height: 37.50px; left: 1339px; top: 43px; position: absolute; border: none; background: none; cursor: pointer; display: inline-flex; justify-content: center; align-items: center;">
+        <img src = "../static/home.png" style="width: 100%; height: 100%;" alt="Home Button">
+    </button>
+    
+      <!-- Text Container -->
+      <div class="text-container" style="width: 625px; height: 95px; left: 550px; top: 200px;">Welcome to PrecesionText, your all-in-one platform for checking grammar, summarizing text, and translating content. Whether you're a student, professional, or language enthusiast, our tools are designed to assist you in refining and understanding written content. Below, you'll find a guide on how to make the most of our services:<br/><br/>1. Grammar Checker:<br/>How It Works: Copy and paste your text into the provided space, or type directly into the editor. Click the "Check Grammar" button, and our advanced algorithm will analyze your text for grammatical errors.<br/>Supported Languages: English<br/><br/>2. Text Summarizer:<br/>How It Works: Input a lengthy piece of text, then click "Summarize." Our tool will generate a concise summary, preserving the main points and key information.<br/>Applications: Use the summarizer for condensing articles, research papers, or any lengthy document to save time and extract essential information efficiently.<br/><br/>3. Text Translator:<br/>Bilingual View: View the original and translated texts side by side for easy comparison and understanding.<br/>Supported Languages: English to Hindi<br/><br/>Tips for Optimal Usage:<br/>Ensure the input text is clear and well-formatted for accurate results.<br/>Experiment with different options to tailor the services to your specific needs.<br/>For translations, be mindful of the context and choose the appropriate language pair for accurate conversions.</div>
+      <button id = "account" class="menu-button" style="width: 123px; height: 28px; left: 95px; top: 164px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Sign-Up</button>
+      <button id = "grammer" class="menu-button" style="width: 141px; height: 28px; left: 95px; top: 204px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Grammer</button>
+      <button id = "summarize" class="menu-button" style="width: 165px; height: 28px; left: 95px; top: 244px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Summarize</button>
+      <button id = "translate" class="menu-button" style="width: 155px; height: 28px; left: 95px; top: 285px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Translate</button>
+      <button id = "contactus" class="menu-button" style="width: 169px; height: 28px; left: 95px; top: 477px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Contact Us</button>
+      <button id = "help" class="menu-button" style="width: 159px; height: 36px; left: 95px; top: 515px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Help</button>
+    
+      <script>
+        document.getElementById("account").addEventListener("click", function() {
+            // Redirect to account.html
+            window.location.href = "/signup";
+        });
+
+        document.getElementById("grammer").addEventListener("click", function() {
+            // Redirect to grammer.html
+            window.location.href = "/grammer";
+        });
+
+        document.getElementById("summarize").addEventListener("click", function() {
+            // Redirect to summarize.html
+            window.location.href = "/summarise";
+        });
+
+        document.getElementById("translate").addEventListener("click", function() {
+            // Redirect to translate.html
+            window.location.href = "/translate";
+        });
+
+        document.getElementById("contactus").addEventListener("click", function() {
+            // Redirect to contactus.html
+            window.location.href = "/contactus";
+        });
+
+        document.getElementById("help").addEventListener("click", function() {
+            // Redirect to help.html
+            window.location.href = "/help";
+        });
+
+        document.getElementById("usericon").addEventListener("click", function() {
+            // Redirect to user.html
+            window.location.href = "/account";
+        });
+
+        document.getElementById("homeicon").addEventListener("click", function() {
+            // Redirect to home.html
+            window.location.href = "/home";
+        });
+    </script>
+
+    </body>
+  </html>

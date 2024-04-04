@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grammer</title>
+    <style>
+        /* CSS Styles */
+        .image {
+            position: absolute;
+        }
+        .rounded-div {
+            position: absolute;
+            border-radius: 40px;
+        }
+        .text-area {
+            position: absolute;
+            border-radius: 40px;
+            font-size: 22px;
+            background: #D9D9D9;
+        }
+        .button {
+            position: absolute;
+            color: white;
+            font-size: 17px;
+            font-family: Inter;
+            font-weight: 400;
+            background-color: #008080;
+            border: none;
+            cursor: pointer;
+        }
+        .upload-button {
+            width: 106px;
+            height: 19px;
+            left: 417px;
+            top: 686px;
+            border-radius: 100px;
+        }
+        .check-button {
+            width: 89px;
+            height: 19px;
+            left: 740px;
+            top: 780px;
+            border-radius: 5px;
+        }
+        .title {
+            position: absolute;
+            color: #001F3F;
+            font-size: 50px;
+            font-family: Inter;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .menu-item {
+            position: absolute;
+            color: #001F3F;
+            font-size: 30px;
+            font-family: Inter;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <!-- Images -->
+    <div class="rounded-div" style="width: 283px; height: 831px; left: 0px; top: 142px; background: #F0F0F0; border-radius: 20px;"></div>
+    <img class="image" style="width: 24px; height: 22px; left: 54px; top: 486px;" src = "../static/contact.png" alt="Contact Image">
+    <img class="image" style="width: 22px; height: 23px; left: 54px; top: 520px;" src= "../static/help.png" alt="Contact Image">
+    <img class="image" style="width: 27px; height: 28px; left: 54px; top: 208px;" src= "../static/grammercheck.png" alt="Grammer Check Image">
+    <img class="image" style="width: 27px; height: 28px; left: 54px; top: 163px;" src= "../static/user.png" alt="User Image">
+    <img class="image" style="width: 21px; height: 25px; left: 53px; top: 248px;" src= "../static/grammer.png" alt="grammer Image">
+    <img class="image" style="width: 24px; height: 24px; left: 54px; top: 290px;" src= "../static/translate.png" alt="Translate Image">
+    <img class="image" style="width: 249px; height: 96px; left: 17px; top: 28px;" src= "../static/precision-text.png" alt="Precision Text Image">
+    <button id="usericon" style="width: 42px; height: 37.42px; left: 1248px; top: 43px; position: absolute; border: none; background: none; cursor: pointer; display: inline-flex; justify-content: center; align-items: center;">
+        <img src= "../static/user.png" style="width: 100%; height: 100%;" alt="User Button">
+    </button>
+    
+    <button id = "homeicon" style="width: 42px; height: 37.50px; left: 1339px; top: 43px; position: absolute; border: none; background: none; cursor: pointer; display: inline-flex; justify-content: center; align-items: center;">
+        <img src= "../static/home.png" style="width: 100%; height: 100%;" alt="Home Button">
+    </button>
+    
+
+    <!-- Divs -->
+    <div class="rounded-div" style="width: 501px; height: 549px; left: 370px; top: 186px; background: #D9D9D9;"></div>
+    <div class="title" style="width: 625px; height: 95px; left: 358px; top: 34px;">Welcome to PrecesionText</div>
+    <div class="rounded-div" style="width: 1050px; height: 831px; left: 350px; top: 142px; background: white; border-radius: 30px; border: 1px black solid;"></div>
+    <div class="rounded-div" style="width: 151px; height: 36px; left: 714px; top: 772px; background: #008080;"></div>
+    <button id = "account" class="menu-button" style="width: 123px; height: 28px; left: 95px; top: 164px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Sign-Up</button>
+    <button id="grammer" class="menu-button" style="width: 141px; height: 28px; left: 95px; top: 204px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Grammer</button>
+    <button id = "summarize" class="menu-button" style="width: 165px; height: 28px; left: 95px; top: 244px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Summarize</button>
+    <button id = "translate" class="menu-button" style="width: 155px; height: 28px; left: 95px; top: 285px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Translate</button>
+    <button id = "contactus" class="menu-button" style="width: 169px; height: 28px; left: 95px; top: 477px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Contact Us</button>
+    <button id = "help"class="menu-button" style="width: 159px; height: 36px; left: 95px; top: 515px; position: absolute; border: none; background: none; cursor: pointer; font-size: 22px">Help</button>
+
+    <textarea id="inputTextArea" class="text-area" style="width: 470px; height: 549px; left: 364px; top: 186px; Padding:13px;" rows="7" cols="60" placeholder="  Enter your text here."></textarea>
+    <button onclick="submitInput()" id = "check" class="button check-button" type="submit" style="left: 740px; top: 780px;">check</button>
+    <div id = "output" class="rounded-div" style="font-size: 22px; width: 470px; height: 549px; left: 882px; top: 186px; background: #D9D9D9; Padding:13px;"></div>
+
+    <script>
+        document.getElementById("account").addEventListener("click", function() {
+            // Redirect to account.html
+            window.location.href = "/signup";
+        });
+
+        document.getElementById("grammer").addEventListener("click", function() {
+            // Redirect to account.html
+            window.location.href = "/grammer";
+        });
+
+        document.getElementById("summarize").addEventListener("click", function() {
+            // Redirect to account.html
+            window.location.href = "/summarise";
+        });
+
+        document.getElementById("translate").addEventListener("click", function() {
+            // Redirect to account.html
+            window.location.href = "/translate";
+        });
+
+        document.getElementById("contactus").addEventListener("click", function() {
+            // Redirect to account.html
+            window.location.href = "/contactus";
+        });
+
+        document.getElementById("help").addEventListener("click", function() {
+            // Redirect to account.html
+            window.location.href = "/help";
+        });
+
+        document.getElementById("usericon").addEventListener("click", function() {
+            // Redirect to account.html
+            window.location.href = "/signup";
+        });
+
+        document.getElementById("homeicon").addEventListener("click", function() {
+            // Redirect to account.html
+            window.location.href = "/home";
+        });
+
+        function submitInput() {
+            const inputData = document.getElementById('inputTextArea').value;
+            fetch('/process_grammer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({inputData: inputData}),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('output').innerText = data.outputData;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+      
+</body>
+</html>
